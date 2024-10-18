@@ -1,0 +1,129 @@
+/* Layout de la page */
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-photo {
+  background-image: url('../image/profil2.png'); /* Ajustez le chemin de l'image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.noise-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url('../image/blanc.png'); /* Ajustez le chemin de l'image */
+  opacity: 0.05; /* Ajuste la transparence selon tes préférences */
+  animation: noise-animation 0.3s infinite; /* Animation pour un effet de bruit */
+  z-index: 1; /* Pour que le filtre soit au-dessus de l'image */
+}
+
+@keyframes noise-animation {
+  0% { background-position: 0 0; }
+  5% { background-position: 25% 5%; }
+  10% { background-position: 40% 15%; }
+  15% { background-position: 60% 10%; }
+  20% { background-position: 80% 25%; }
+  25% { background-position: 90% 35%; }
+  30% { background-position: 70% 50%; }
+  35% { background-position: 50% 60%; }
+  40% { background-position: 30% 70%; }
+  45% { background-position: 10% 80%; }
+  50% { background-position: 5% 90%; }
+  55% { background-position: 15% 70%; }
+  60% { background-position: 25% 60%; }
+  65% { background-position: 35% 50%; }
+  70% { background-position: 45% 40%; }
+  75% { background-position: 55% 30%; }
+  80% { background-position: 65% 20%; }
+  85% { background-position: 75% 10%; }
+  90% { background-position: 85% 0%; }
+  95% { background-position: 90% 10%; }
+  100% { background-position: 0 0; }
+}
+
+/* Section blanche */
+.white-band {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center;
+  padding: 10px 20px; /* Ajuste les marges */
+  box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+  z-index: 2;
+}
+
+/* Alignement du texte */
+.text-left {
+  text-align: left;
+}
+
+.sections {
+  display: flex;
+  gap: 40px;
+}
+
+.sections h2 {
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* Section de défilement */
+.scroll-section {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin: 60px 0;
+}
+
+/* Texte de présentation */
+.scroll-text {
+  width: 100%; /* Prendre toute la largeur */
+  margin: 0 20px; /* Marge de 20px à gauche et à droite */
+  max-width: calc(100% - 40px); /* Limite la largeur maximale pour les écrans plus grands */
+  line-height: 1.63;
+}
+
+/* Section Matériel */
+.material-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.material-column {
+  flex: 1;
+  min-width: 150px;
+  margin: 10px;
+}
+
+.material-column h2 {
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.material-column h3 {
+  text-align: center; /* Centre le texte */
+  margin: 10px 0; /* Espacement vertical pour séparer les éléments */
+  border-bottom: 1px solid #ddd; /* Ligne pour séparer les éléments */
+  padding-bottom: 5px; /* Espace sous la ligne */
+}
