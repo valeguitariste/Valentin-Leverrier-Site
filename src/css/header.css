@@ -1,0 +1,153 @@
+.background-photo {
+  background-image: url('../image/profil2.png'); /* Assurez-vous que le chemin est correct */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  position: relative;
+  z-index: 1; /* Assurez-vous que l'arrière-plan est en arrière-plan */
+  width: 100%; /* Assurez-vous que l'arrière-plan prend toute la largeur */
+  overflow: hidden; /* Évitez le débordement */
+}
+
+.white-band {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Ajustez l'opacité selon vos besoins */
+  z-index: 3; /* Assurez-vous que la white band est au-dessus du voile */
+  width: 100%; /* Assurez-vous que la white band prend toute la largeur */
+  box-sizing: border-box; /* Incluez le padding dans la largeur */
+  position: absolute; /* Positionnez la bande blanche en bas */
+  bottom: 0; /* Positionnez la bande blanche en bas */
+}
+
+.text-left {
+  z-index: 4; /* Assurez-vous que le texte est au-dessus du voile */
+}
+
+.sections {
+  display: flex;
+  gap: 20px;
+  z-index: 4; /* Assurez-vous que les sections sont au-dessus du voile */
+}
+
+.sections.open {
+  display: block;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 4; /* Assurez-vous que les icônes sociales sont au-dessus du voile */
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 4; /* Assurez-vous que l'icône du menu est au-dessus du voile */
+}
+
+.menu-icon img {
+  width: 30px;
+}
+
+/* Styles pour le hamburger menu */
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 4; /* Assurez-vous que le hamburger est au-dessus du voile */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .white-band {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%; /* Assurez-vous que la white band prend toute la largeur */
+    box-sizing: border-box; /* Incluez le padding dans la largeur */
+    position: static; /* Positionnez la bande blanche en haut pour les petits écrans */
+  }
+  .text-left {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .text-left h1 {
+    font-size: 1.5rem; /* Ajuster la taille pour les petits écrans */
+  }
+  .text-left h2 {
+    font-size: 1rem; /* Ajuster la taille pour les petits écrans */
+  }
+  .sections {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .sections.open {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .social-icons img {
+    width: 20px;
+  }
+}
+
+/* Styles pour les très petits écrans */
+@media (max-width: 480px) {
+  .white-band {
+    padding: 5px;
+    width: 100%; /* Assurez-vous que la white band prend toute la largeur */
+    box-sizing: border-box; /* Incluez le padding dans la largeur */
+    position: static; /* Positionnez la bande blanche en haut pour les très petits écrans */
+  }
+  .text-left h1 {
+    font-size: 1.2rem; /* Ajuster la taille pour les très petits écrans */
+  }
+  .text-left h2 {
+    font-size: 0.9rem; /* Ajuster la taille pour les très petits écrans */
+  }
+  .sections {
+    gap: 5px;
+  }
+  .social-icons img {
+    width: 15px;
+  }
+}

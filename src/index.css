@@ -3,8 +3,8 @@ body {
   font-family: 'Lora', serif; /* Appliquer Lora à tout le texte */
   background-color: #ffffff; /* Fond blanc */
   color: #333; /* Couleur du texte */
+  overflow-x: hidden; /* Évitez le débordement horizontal */
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

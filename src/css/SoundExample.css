@@ -1,0 +1,86 @@
+.section-title {
+  margin-bottom: 70px; /* Espace sous le titre */
+}
+
+.sound-examples {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Espace entre les vignettes */
+}
+
+.sound-example {
+  position: relative;
+  text-align: center;
+  cursor: pointer; /* Change le curseur en une main pour les éléments cliquables */
+  transition: transform 0.3s ease; /* Ajoute une transition pour la propriété transform */
+  margin-bottom: 20px; /* Espace sous chaque vignette */
+}
+
+.sound-example.hovered {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Ajoute une transition pour la propriété transform */
+}
+
+.thumbnail.playing {
+  filter: brightness(0.5); /* Assombrit l'image lorsque l'audio est en cours de lecture */
+  animation: shadowPulse 3s infinite alternate; /* Ajoute l'animation de l'ombre */
+  transform: scale(1.1); /* Grossit légèrement la vignette lorsqu'elle est en lecture */
+}
+
+.title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sound-example:hover .title {
+  opacity: 1;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sound-example:hover .icon {
+  opacity: 1;
+}
+
+/* Animation pour changer la teinte grise de l'ombre */
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Noir */
+  }
+  25% {
+    box-shadow: 0 4px 8px rgba(64, 64, 64, 0.7); /* Gris foncé */
+  }
+  50% {
+    box-shadow: 0 4px 8px rgba(128, 128, 128, 0.7); /* Gris moyen */
+  }
+  75% {
+    box-shadow: 0 4px 8px rgba(192, 192, 192, 0.7); /* Gris clair */
+  }
+  100% {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7); /* Blanc */
+  }
+}

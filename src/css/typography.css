@@ -4,33 +4,27 @@ h1, h2, h3 {
   color: #333; /* Couleur du texte */
   margin: 10px 0; /* Espacement vertical */
 }
-
 /* Taille de h1 (le plus grand) */
 h1 {
   font-size: 2.6rem;
 }
-
 /* Taille de h2 (plus petit que h1) */
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
-
 /* Taille de h3 (plus petit que h2) */
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
-
 /* Styles pour les paragraphes */
 p {
-  font-size: 1rem; /* Taille de police pour les paragraphes */
+  font-size: 1.3rem; /* Taille de police pour les paragraphes */
   line-height: 1.5;
 }
-
 /* Styles pour les autres éléments de texte */
 .text-small {
   font-size: 0.875rem; /* Taille de police pour le texte petit */
 }
-
 .text-large {
   font-size: 1.125rem; /* Taille de police pour le texte grand */
 }

@@ -1,0 +1,37 @@
+.section-title {
+  margin-bottom: 70px; /* Espace sous le titre */
+}
+
+
+/* Section Matériel */
+.material-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.material-column {
+  flex: 1;
+  min-width: 150px;
+  margin: 10px;
+}
+
+.material-column h2 {
+  text-align: center;
+  border-bottom: 1px solid #333; /* Réduisez la taille de la bordure */
+  padding-bottom: 5px; /* Réduisez le padding en bas */
+  margin: 10px 0; /* Réduisez la marge pour les titres */
+}
+
+.material-column p {
+  margin: 2px 0; /* Réduisez la marge pour les paragraphes */
+  border-bottom: 1px solid #ddd; /* Ligne pour séparer les éléments */
+  padding-bottom: 2px; /* Réduisez l'espace sous la ligne */
+  cursor: pointer; /* Change le curseur en une main pour les éléments cliquables */
+  transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de grossissement */
+}
+
+.material-column p:hover {
+  transform: scale(1.1); /* Grossit légèrement le texte lorsqu'on le survole */
+}

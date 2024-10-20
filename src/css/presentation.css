@@ -1,0 +1,48 @@
+/* Styles généraux pour la section de présentation */
+.presentation-title {
+  margin-bottom: 70px; /* Espace sous le titre */
+}
+.scroll-section {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin: 0; /* Assurez-vous qu'il n'y a pas de marge */
+  box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+  padding-top: 100vh; /* Ajoutez un padding en haut pour commencer juste en dessous de l'en-tête */
+}
+.scroll-text {
+  width: 100%; /* Prendre toute la largeur */
+  margin: 0 20px; /* Marge de 20px à gauche et à droite */
+  max-width: calc(100% - 40px); /* Limite la largeur maximale pour les écrans plus grands */
+  line-height: 1.63;
+}
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+  .scroll-section {
+    padding: 10px;
+    padding-top: 70vh; /* Ajustez le padding en haut pour les petits écrans */
+  }
+  .scroll-text {
+    font-size: 1rem; /* Réduire la taille du texte pour les petits écrans */
+  }
+}
+/* Styles pour les tablettes */
+@media (max-width: 768px) {
+  .scroll-section {
+    padding: 15px;
+    padding-top: 80vh; /* Ajustez le padding en haut pour les tablettes */
+  }
+  .scroll-text {
+    font-size: 1.1rem; /* Ajuster la taille du texte pour les tablettes */
+  }
+}
+/* Styles pour les écrans moyens */
+@media (max-width: 1200px) {
+  .scroll-section {
+    padding: 20px;
+    padding-top: 90vh; /* Ajustez le padding en haut pour les écrans moyens */
+  }
+  .scroll-text {
+    font-size: 1.2rem; /* Ajuster la taille du texte pour les écrans moyens */
+  }
+}

@@ -1,0 +1,73 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000; /* Assurez-vous que le popup est au-dessus des autres éléments */
+}
+
+.popup-content {
+  width: 90%; /* Réduisez la largeur pour les petits écrans */
+  max-width: 500px; /* Limitez la largeur maximale à 500px */
+  max-height: 80%; /* Limitez la hauteur maximale à 80% de la hauteur de l'écran */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Inclure le padding dans la taille totale */
+  cursor: default; /* Assurez-vous que le curseur ne change pas à l'intérieur du contenu */
+}
+
+.popup-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+  .popup-content {
+    width: 100%; /* Réduisez la largeur pour les petits écrans */
+    max-width: 100%; /* Limitez la largeur maximale à 90% de la largeur de l'écran */
+    max-height: 100%; /* Limitez la hauteur maximale à 70% de la hauteur de l'écran */
+    padding: 10px; /* Réduisez le padding pour les petits écrans */
+  }
+}
+
+/* Styles pour les écrans moyens */
+@media (min-width: 481px) and (max-width: 768px) {
+  .popup-content {
+    width: 85%; /* Ajustez la largeur pour les écrans moyens */
+    max-width: 600px; /* Limitez la largeur maximale à 600px */
+    max-height: 70%; /* Limitez la hauteur maximale à 70% de la hauteur de l'écran */
+    padding: 15px; /* Ajustez le padding pour les écrans moyens */
+  }
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .popup-content {
+    width: 70%; /* Ajustez la largeur pour les grands écrans */
+    max-width: 800px; /* Limitez la largeur maximale à 800px */
+    max-height: 80%; /* Limitez la hauteur maximale à 80% de la hauteur de l'écran */
+    padding: 20px; /* Ajustez le padding pour les grands écrans */
+  }
+}
+
+/* Styles pour les très grands écrans */
+@media (min-width: 1201px) {
+  .popup-content {
+    width: 30%; /* Ajustez la largeur pour les très grands écrans */
+    max-width: 1000px; /* Limitez la largeur maximale à 1000px */
+    max-height: 30%; /* Limitez la hauteur maximale à 80% de la hauteur de l'écran */
+    padding: 20px; /* Ajustez le padding pour les très grands écrans */
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Popup.css';
+import './css/Popup.css';
 
 const Popup = ({ content, closePopup }) => {
   const handleClickOutside = (e) => {

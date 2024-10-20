@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import mailLogo from './image/mail.png';
 import phoneLogo from './image/phone.png';
 import instaLogo from './image/insta.png';
+import './css/header.css'; // Importez le fichier CSS
 
 const HeaderSection = ({ scrollToSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="background-photo">
-      <div className="noise-filter"></div>
       <div className="white-band">
         <div className="text-left">
           <h1>Valentin Leverrier</h1>
-          <h2>Compositeur - Ingénieur Son</h2>
+          <h2>Artiste Sonore - Ingénieur Son</h2>
         </div>
-        <div className="sections">
+        <div className="menu-icon" onClick={toggleMenu}>
+          <div className={`hamburger ${menuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div className={`sections ${menuOpen ? 'open' : ''}`}>
           <h2 className="clickable" onClick={() => scrollToSection('presentation')}>Présentation</h2>
           <h2 className="clickable" onClick={() => scrollToSection('material')}>Matériel</h2>
           <h2 className="clickable" onClick={() => scrollToSection('experience')}>Expérience</h2>
-          <h2>Exemples sonores</h2>
-          <h2>Média</h2>
+          <h2 className="clickable" onClick={() => scrollToSection('sound-examples')}>Exemples sonores</h2>
+          <h2 className="clickable" onClick={() => scrollToSection('media')}>Média</h2>
         </div>
         <div className="social-icons">
           <a href="mailto:valentin.leverrier@gmail.com">
