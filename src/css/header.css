@@ -89,6 +89,11 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Styles pour les titres cliquables */
+.clickable {
+  cursor: pointer; /* Change le curseur en main (pointer) */
+}
+
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
   .white-band {
