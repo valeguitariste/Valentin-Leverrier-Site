@@ -1,56 +1,92 @@
 /* Styles généraux pour les petits écrans */
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    margin: 0; /* Supprime les marges par défaut */
+  }
+
+  .container {
+    max-width: 100vw; /* Limite la largeur maximale à 100% de la largeur de la fenêtre */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    margin: 0 auto; /* Centre le conteneur */
+  }
+
   .white-band {
-    grid-template-columns: 1fr;
-    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     text-align: center;
+    width: 100%; /* Assurez-vous que la white band prend toute la largeur */
+    box-sizing: border-box; /* Incluez le padding dans la largeur */
+    margin: 0 auto; /* Centre la white band */
   }
 
   .text-left {
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .text-left h1 {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Ajuster la taille pour les petits écrans */
   }
 
   .text-left h2 {
-    font-size: 0.8rem;
+    font-size: 1rem; /* Ajuster la taille pour les petits écrans */
   }
 
   .sections {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px; /* Ajuster l'espacement pour les téléphones */
+    margin-bottom: 10px;
+    width: 100%; /* Assurez-vous que les sections prennent toute la largeur */
+    box-sizing: border-box; /* Incluez le padding dans la largeur */
   }
 
   .sections h2 {
     margin: 5px 0; /* Ajuster la marge pour les téléphones */
     font-size: 3vw; /* S'assurer que la taille des h2 est uniforme */
+    cursor: pointer; /* Change le curseur en main (pointer) */
   }
 
   .social-icons {
+    display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .social-icons img {
-    width: 15px;
+    width: 20px;
+  }
+}
+
+/* Styles spécifiques pour les petits écrans en mode portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .white-band {
+    flex-direction: column;
+    padding: 15px;
   }
 
-  .material-section {
-    flex-direction: column; /* Affiche les colonnes en une seule colonne sur les petits écrans */
-    align-items: center; /* Centre les éléments */
+  .text-left h1 {
+    font-size: 1.4rem; /* Ajuster la taille pour les petits écrans en mode portrait */
   }
 
-  .material-column {
-    min-width: 90%; /* Force chaque colonne à prendre toute la largeur */
-    margin: 4px 0; /* Réduit l'espacement entre les colonnes */
+  .text-left h2 {
+    font-size: 1.2rem; /* Ajuster la taille pour les petits écrans en mode portrait */
   }
 
-  .popup-content {
-    width: 90%; /* Réduit la largeur de la popup sur les petits écrans */
+  .sections {
+    gap: 15px; /* Ajuster l'espacement pour les téléphones en mode portrait */
+  }
+
+  .sections h2 {
+    font-size: 4vw; /* S'assurer que la taille des h2 est uniforme en mode portrait */
+  }
+
+  .social-icons img {
+    width: 25px; /* Ajuster la taille des icônes pour les petits écrans en mode portrait */
   }
 }
 

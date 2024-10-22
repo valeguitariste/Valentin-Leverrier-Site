@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   background-color: rgba(255, 255, 255, 0.8); /* Ajustez l'opacité selon vos besoins */
   z-index: 3; /* Assurez-vous que la white band est au-dessus du voile */
   width: 100%; /* Assurez-vous que la white band prend toute la largeur */
@@ -23,12 +23,14 @@
 }
 
 .text-left {
+  text-align: center;
+  margin-bottom: 10px;
   z-index: 4; /* Assurez-vous que le texte est au-dessus du voile */
 }
 
 .sections {
   display: flex;
-  gap: 20px;
+  gap: 80px;
   z-index: 4; /* Assurez-vous que les sections sont au-dessus du voile */
 }
 

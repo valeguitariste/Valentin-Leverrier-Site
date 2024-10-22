@@ -27,14 +27,16 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
   ];
 
   const audiovisuelItems = [
-    { type: 'video', title: "Capsule Sonore Teaser", videoUrl: "https://www.youtube.com/embed/gZNIQvd8lsM", text: "Composition Sonore des 9 épisodes" },
+    { type: 'video', title: "Capsule Sonore #07", videoUrl: "https://player.vimeo.com/video/546820161", text: "Composition Film d'Animation" },
+    { type: 'video', title: "Capsule Sonore #08", videoUrl: "https://player.vimeo.com/video/657810732", text: "Composition Film d'Animation" },
+    { type: 'video', title: "Capsule Sonore #09", videoUrl: "https://player.vimeo.com/video/721948075", text: "Composition Film d'Animation" },
     { type: 'video', title: "9-4", videoUrl: "https://www.youtube.com/embed/nlMcYo7ZPo0", text: "Enregistrement live multi-piste" },
     { type: 'video', title: "American Boy", videoUrl: "https://www.youtube.com/embed/cKrbWY7-VMo", text: "Enregistrement studio clip" },
-    { type: 'video', title: "Teaser Komodo", videoUrl: "https://www.youtube.com/embed/KRzEAvfNIUY", text: "Enregistrement studio clip" },
     { type: 'video', title: "My Lord Willoughby's Welcome Home", videoUrl: "https://www.youtube.com/embed/mbmWeG5VP04", text: "Enregistrement studio clip" },
     { type: 'video', title: "Canciones Populares", videoUrl: "https://www.youtube.com/embed/hoWQ3mQngPI", text: "Enregistrement studio live" },
     { type: 'video', title: "Arvö Pärt, Für Alina & Fratres", videoUrl: "https://www.youtube.com/embed/duiRN06cBSY", text: "Enregistrement studio live" },
     { type: 'video', title: "Kiua", videoUrl: "https://player.vimeo.com/video/517594841", text: "Composition et enregistrement studio clip" },
+
   ];
 
   return (

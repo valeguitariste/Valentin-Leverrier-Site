@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useRef } from 'react';
 import './css/MediaSection.css';
 import image1 from './image/media/image1.jpg'; // Assurez-vous que ces chemins sont corrects
 import image2 from './image/media/image2.jpg';
 import image3 from './image/media/image3.jpg';
-import image4 from './image/media/image4.jpg';
+import image4 from './image/media/moi1.png';
+import image5 from './image/media/studio.png';
+import image6 from './image/media/studio2.png';
+import image7 from './image/media/studio3.png';
+import image8 from './image/media/studio4.png';
 
 const MediaSection = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -18,31 +20,6 @@ const MediaSection = () => {
   const closePopup = () => {
     setSelectedImage(null);
   };
-
-  useEffect(() => {
-    const currentMediaRef = mediaRef.current; // Copiez la valeur de mediaRef.current dans une variable
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            AOS.refresh(); // Réinitialisez AOS lorsque la section devient visible
-          }
-        });
-      },
-      { threshold: 0.1 } // Ajustez le seuil selon vos besoins
-    );
-
-    if (currentMediaRef) {
-      observer.observe(currentMediaRef);
-    }
-
-    return () => {
-      if (currentMediaRef) {
-        observer.unobserve(currentMediaRef);
-      }
-    };
-  }, []);
 
   return (
     <div className="scroll-section" id="media" ref={mediaRef}>
@@ -59,6 +36,18 @@ const MediaSection = () => {
         </div>
         <div className="media-item" data-aos="fade-up" onClick={() => handleImageClick(image4)}>
           <img src={image4} alt="Media 4" />
+        </div>
+        <div className="media-item" data-aos="fade-up" onClick={() => handleImageClick(image5)}>
+          <img src={image5} alt="Media 5" />
+        </div>
+        <div className="media-item" data-aos="fade-up" onClick={() => handleImageClick(image6)}>
+          <img src={image6} alt="Media 6" />
+        </div>
+        <div className="media-item" data-aos="fade-up" onClick={() => handleImageClick(image7)}>
+          <img src={image7} alt="Media 7" />
+        </div>
+        <div className="media-item" data-aos="fade-up" onClick={() => handleImageClick(image8)}>
+          <img src={image8} alt="Media 8" />
         </div>
         {/* Ajoutez d'autres images ici */}
       </div>

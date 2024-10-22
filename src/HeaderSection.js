@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import mailLogo from './image/mail.png';
 import phoneLogo from './image/phone.png';
 import instaLogo from './image/insta.png';
-import './css/header.css'; // Importez le fichier CSS
+import './css/header.css';// Importez le fichier CSS
 
 const HeaderSection = ({ scrollToSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
