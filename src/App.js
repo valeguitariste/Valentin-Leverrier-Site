@@ -7,7 +7,7 @@ import SoundExample from './SoundExample';
 import MediaSection from './MediaSection';
 
 import './index.css'; // Importez le fichier CSS global
-import './css/responsive.css'; // Importez le fichier CSS pour la responsivité
+
 
 function App() {
   const scrollToSection = (sectionId) => {

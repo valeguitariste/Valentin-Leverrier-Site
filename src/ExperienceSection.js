@@ -3,7 +3,13 @@ import Popup from './Popup'; // Importez le composant Popup
 import './css/typography.css'; // Importez le fichier CSS
 import './css/ExperienceSection.css';
 
-const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
+// Importation des fichiers audio
+import ventPoeme from './music/vent_poeme.mp3';
+import fatherSon from './music/Father_.mp3';
+import wishYouWereHere from './music/Wish_.mp3';
+import putItThere from './music/Put_.mp3';
+
+const ExperienceSection = () => {
   const [selectedContent, setSelectedContent] = useState(null);
 
   const handleContentClick = (content) => {
@@ -15,10 +21,10 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
   };
 
   const studioItems = [
-    { type: 'audio', title: "Je n’ai pas peur du vent", audioPath: './music/vent_poeme.mp3', text: "Enregistrement voix" },
-    { type: 'audio', title: "Father & Son - Serge Vilamajo", audioPath: './music/Father_.mp3', text: "Mastering" },
-    { type: 'audio', title: "Wish You Were Here (cover) - Serge Vilamajo", audioPath: './music/Wish_.mp3', text: "Mastering" },
-    { type: 'audio', title: "Put it There (cover) - Serge Vilamajo", audioPath: './music/Put_.mp3', text: "Mastering" },
+    { type: 'audio', title: "Je n’ai pas peur du vent", audioPath: ventPoeme, text: "Enregistrement voix" },
+    { type: 'audio', title: "Father & Son - Serge Vilamajo", audioPath: fatherSon, text: "Mastering" },
+    { type: 'audio', title: "Wish You Were Here (cover) - Serge Vilamajo", audioPath: wishYouWereHere, text: "Mastering" },
+    { type: 'audio', title: "Put it There (cover) - Serge Vilamajo", audioPath: putItThere, text: "Mastering" },
     { title: "Ballade Blues - Quentin Gouraud" },
     { title: "Colours in the Sky - Louise" },
     { title: "Summertime - Louise" },
@@ -36,7 +42,6 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
     { type: 'video', title: "Canciones Populares", videoUrl: "https://www.youtube.com/embed/hoWQ3mQngPI", text: "Enregistrement studio live" },
     { type: 'video', title: "Arvö Pärt, Für Alina & Fratres", videoUrl: "https://www.youtube.com/embed/duiRN06cBSY", text: "Enregistrement studio live" },
     { type: 'video', title: "Kiua", videoUrl: "https://player.vimeo.com/video/517594841", text: "Composition et enregistrement studio clip" },
-
   ];
 
   return (
@@ -70,6 +75,7 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
       </div>
       {selectedContent && (
         <Popup
+          className="experience-popup"
           content={
             selectedContent.type === 'audio' ? (
               <>
@@ -78,7 +84,7 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
                   <source src={selectedContent.audioPath} type="audio/mpeg" />
                   Votre navigateur ne prend pas en charge l'audio.
                 </audio>
-                {selectedContent.text && <p>{selectedContent.text}</p>}
+                {selectedContent.text && <text-small>{selectedContent.text}</text-small>}
               </>
             ) : selectedContent.type === 'video' ? (
               <>
@@ -92,7 +98,7 @@ const ExperienceSection = ({ openAudioPopup, openVideoPopup }) => {
                   width="100%"
                   height="400"
                 ></iframe>
-                {selectedContent.text && <p>{selectedContent.text}</p>}
+                {selectedContent.text && <text-small>{selectedContent.text}</text-small>}
               </>
             ) : null
           }

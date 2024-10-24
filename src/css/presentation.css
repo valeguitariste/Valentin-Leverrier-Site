@@ -14,7 +14,6 @@
   width: 100%; /* Prendre toute la largeur */
   margin: 0 20px; /* Marge de 20px à gauche et à droite */
   max-width: calc(100% - 40px); /* Limite la largeur maximale pour les écrans plus grands */
-  line-height: 1.63;
 }
 /* Styles pour les petits écrans */
 @media (max-width: 480px) {

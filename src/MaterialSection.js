@@ -38,37 +38,37 @@ const MaterialSection = () => {
   };
 
   const microphones = [
-    { title: 'Neumann RSM 191', description: "Le Neumann RSM 191 est un microphone à condensateur de haute qualité, idéal pour les enregistrements en stéréo. Sa conception le rend parfait pour capturer les détails subtils de la musique.", image: neumannImage },
+    { title: 'Neumann RSM 191', description: "Le Neumann RSM 191, avec ses deux capsules – hyper-cardioïde et figure en 8 – crée une image stéréophonique unique et magnifique. Il me suit dans mes voyages, capturant chaque ambiance. Pratique pour l’audiovisuel, il permet d’ajuster l’ouverture panoramique, que ce soit à l’enregistrement ou en post-production.", image: neumannImage },
     { title: 'Sennheiser 416', description: "Le Sennheiser 416 p48 est un microphone directionnel de renommée mondiale, réputé pour sa capacité à capturer des sons clairs dans des environnements bruyants.", image: sennheiserImage },
-    { title: 'Beyerdynamic m160', description: "Le Beyerdynamic M160 est un microphone à double membrane, qui offre une réponse en fréquence étendue, parfait pour les enregistrements vocaux.", image: beyerdynamicImage },
+    { title: 'Beyerdynamic m160', description: "Le Beyerdynamic M160, avec sa directivité hypercardioïde, est un microphone à ruban idéal pour les enregistrements vocaux en intérieur. Son ruban confère à la voix une chaleur et une tonalité naturelle.", image: beyerdynamicImage },
     { title: 'DPA 6061', description: "Le DPA 6061 est un microphone de lavalier extrêmement petit et discret, offrant une qualité sonore exceptionnelle.", image: dpaImage },
-    { title: 'Primo EM272Z1', description: "Le Primo EM272Z1 est un microphone à électret de haute qualité, utilisé dans les applications de tournage.", image: primoImage },
-    { title: 'Schoeps CCM4', description: "Le Schoeps CCM4 est un microphone professionnel très apprécié pour sa qualité sonore et sa robustesse.", image: schoepsImage },
-    { title: 'U87 Neumann', description: "Le U87 de Neumann est l'un des microphones les plus emblématiques, connu pour sa chaleur et sa clarté.", image: u87Image },
+    { title: 'Primo EM272Z1', description: "Les Primo EM272Z1, en configuration stéréo, sont de petits microphones à électrets que je laisse toujours branché à mon enregistreur lors de mes voyages. Ils me permettent de capter rapidement une belle stéréo quand j'en ai besoin. Grâce à leurs longs câbles, je peux aussi les placer près des objets sonores pour en saisir les détails.", image: primoImage },
+    { title: 'Schoeps CCM4 DIY', description: "Les Schoeps CCM4, répliques élaborées par Microphone Part et montés par mes soins, offrent une grande polyvalence, notamment en configuration ORTF pour la stéréophonie (orchestre, batterie, ambiance) ou pour des instruments solistes. Pratiques, robustes et légers, ils sont mes micros favoris lors de mes ateliers de création sonore.", image: schoepsImage },
+    { title: 'U87 Neumann DIY', description: "Les U87 de Neumann, répliques élaborées par Microphone Part et montés par mes soins, sont des microphones emblématiques, réputés pour leur chaleur et leur clarté. Véritables couteaux suisses, je les utilise pour les voix, les instruments et les bruitages, principalement en studio, mais aussi en extérieur pour les prises lives.", image: u87Image },
   ];
 
   const enregistreurs = [
-    { title: 'Sound Devices MixPre 6', description: "Le MixPre 6 est un enregistreur audio portable de haute qualité, parfait pour les producteurs et les ingénieurs du son.", image: mixpreImage },
-    { title: 'Tentacle Track E', description: "Le Tentacle Track E est un enregistreur compact et polyvalent, conçu pour capturer un son de haute qualité.", image: tentacleTrackImage },
-    { title: 'Tentacle Sync', description: "Le Tentacle Sync est un outil essentiel pour la synchronisation de l'audio et de la vidéo.", image: tentacleSyncImage },
+    { title: 'Sound Devices MixPre 6', description: "Le MixPre 6 est mon enregistreur de terrain, idéal pour les tournages et comme carte son lors de mes voyages. Léger et très versatile, il sublime mes microphones et avec sa batteoffre un son magnifique. Contrôlable via Bluetooth avec un smartphone ou une tablette, il permet des prises rapides et de haute qualité. Avec une batterie externe, il peut faire fonctionner une grande configuration de 8 micros pendant des heures.", image: mixpreImage },
+    { title: 'Tentacle Track E', description: "Le Tentacle Track E est un enregistreur mignature qui se cache très bien dans les vêtements d'un comédien. Controlable à distance, il est très pratique pour les interviews.", image: tentacleTrackImage },
+    { title: 'Tentacle Sync', description: "Le Tentacle Sync est un outil essentiel pour la synchronisation de l'audio et de la vidéo. Il me permet de me synchroniser à une caméra ou à mon enregistreur pour les prises de sons à plusieurs microphones. ", image: tentacleSyncImage },
   ];
 
   const enceintes = [
-    { title: 'Beyerdynamic dt770 pro', description: "Les Beyerdynamic DT 770 Pro sont des casques de studio fermés, offrant une reproduction sonore précise et une isolation acoustique exceptionnelle.", image: dtImage },
-    { title: 'Genelec 8010', description: "Les Genelec 8010 sont des moniteurs compacts de studio, offrant une reproduction sonore précise.", image: genelecImage },
-    { title: 'PMC Result 6', description: "Les PMC Result 6 sont des moniteurs de haute qualité qui offrent une reproduction sonore précise et détaillée, idéale pour le mixage et le mastering. Leur conception permet de capturer chaque nuance sonore, assurant une clarté exceptionnelle dans les productions audio. Robustes et performants, ces moniteurs sont indispensables pour les créateurs de son.", image: pmcImage },
+    { title: 'Beyerdynamic dt770 pro', description: "Les Beyerdynamic DT 770 Pro est mon casque à tout faire. Il me suit partout dans mes enregistrements, dans l'écoute de mes mixages, de la musique. J'adore sa réponse en fréquence et sa capacité à retransmettre les espaces acoustiques.", image: dtImage },
+    { title: 'Genelec 8010', description: "Les Genelec 8010 sont des moniteurs compacts de studio. Avec la petite sacoche, ils sont très pratiques pour les déplacements, les écoutes à l'extérieur du studio. ", image: genelecImage },
+    { title: 'PMC Result 6', description: "Les PMC Result 6 sont mes enceintes de monitoring idéales pour composer, mixer et masteriser. Après avoir testé plusieurs modèles, elles restent mes préférées. Leur précision et leur confort d’écoute en font des alliées indispensables dans tous mes projets sonores.", image: pmcImage },
   ];
 
   const autres = [
-    { title: 'Ambient qp5100', description: "Les accessoires Ambient sont connus pour leur durabilité et leur performance.", image: ambientImage },
-    { title: 'Manfrotto Micro Carbone', description: "Le Pied Micro Carbone est un choix léger et robuste pour les professionnels.", image: manfrottoImage },
-    { title: 'Reaper', description: "Reaper est un logiciel de production audio numérique réputé pour sa flexibilité et sa puissance, ce qui en fait un outil de choix pour les musiciens, les ingénieurs du son et les producteurs. Grâce à son interface personnalisable, les utilisateurs peuvent créer un environnement de travail sur mesure qui correspond parfaitement à leur flux de travail, optimisant ainsi leur créativité. En intégrant une vaste bibliothèque d'effets et d'instruments virtuels, Reaper offre une multitude de possibilités sonores, permettant aux professionnels de l'édition et de la composition d'explorer de nouvelles dimensions musicales.", image: reaperImage },
-    { title: 'Protools', description: "Pro Tools est un logiciel de production audio numérique reconnu dans l'industrie pour sa puissance et ses fonctionnalités avancées, ce qui en fait un standard de référence pour les ingénieurs du son et les producteurs. Avec une interface intuitive et des outils de montage précis, il permet un flux de travail efficace, adapté aux besoins des projets les plus complexes. Grâce à sa vaste gamme de plug-ins et d'instruments virtuels, Pro Tools offre une flexibilité exceptionnelle pour la création musicale et le mixage, permettant aux professionnels de tirer le meilleur parti de chaque enregistrement.", image: protoolsImage },
-    { title: 'Ableton', description: "Ableton Live est un logiciel de production audio numérique particulièrement apprécié des musiciens et des DJs pour sa capacité à combiner création musicale et performance en direct. Son interface unique, qui permet une navigation fluide entre le mode Arrangement et le mode Session, facilite l'expérimentation et l'improvisation, rendant le processus créatif dynamique et interactif. Avec une vaste bibliothèque de sons, d'effets et d'instruments virtuels, Ableton Live offre des outils puissants pour la composition et le mixage, permettant aux professionnels de donner vie à leurs idées musicales de manière innovante.", image: abletonImage },
-    { title: 'PCB Grinder MS76', description: "Le MS76 est un compresseur Mid/Side ou double mono de type 1176 fabriqué par Gustav de GroupDIY.", image: msImage },
-    { title: 'PCB Grinder PQ2', description: "Version DIY de l'égaliseur légendaire Pultec par le maître danois Gustav de GOLY / PCB Grinder. Cette version a des plages de gain qui sont plus adaptées au mastering. ", image: pqImage },
-    { title: 'RME Fireface UC', description: "Le RME Fireface UC est une interface audio USB professionnelle qui offre une qualité sonore exceptionnelle et des fonctionnalités avancées pour les musiciens et les ingénieurs du son. Avec sa capacité à gérer jusqu'à 36 canaux audio simultanés, elle permet un enregistrement et un mixage de haute fidélité. Son préamplificateur de micro intégré et ses convertisseurs AD/DA de premier ordre garantissent une performance audio optimale. De plus, la Fireface UC est équipée d'une connectivité polyvalente, y compris des entrées/sorties analogiques et numériques.", image: rmeImage },
-    { title: 'RME Octamic II', description: "Le RME Octamic II est un préamplificateur micro polyvalent qui offre une qualité audio exceptionnelle et une connectivité flexible pour les professionnels de l'audio. Doté de huit canaux de préamplification, il intègre des convertisseurs AD/DA de haute qualité, garantissant une conversion précise des signaux audio. Avec ses multiples options de connexion, y compris ADAT, AES/EBU et analogique, l'Octamic II s'intègre facilement dans divers systèmes d'enregistrement et de mixage.", image: octamicImage },
+    { title: 'Ambient qp5100', description: "Cette perche de 4m me sert pour tous mes tournages audiovisuels. Légère, robuste, se déploie et se cable rapidement, elle est parfaite pour moi.", image: ambientImage },
+    { title: 'Manfrotto Micro Carbone', description: "Le pied Manfrotto Micro Carbone est extrêmement léger et pratique. Je l’utilise lors de mes voyages pour capter des prises stéréo, ainsi que dans mes ateliers de création sonore pour positionner le couple de Schoeps.", image: manfrottoImage },
+    { title: 'Reaper', description: "Reaper est mon logiciel de coeur et le nerf de mon studio à Paris. J’y fais tout : édition, enregistrement, mixage et mastering. C’est ma toile blanche, où clavier et souris sont mes pinceaux, et le microphone, ma palette de couleurs. Avec une bonne prise en main, tout se met en forme rapidement. J’apprécie aussi particulièrement son histoire liée à l’open source.", image: reaperImage },
+    { title: 'Protools', description: "Pro Tools est un logiciel de production audio numérique puissant, faisant de lui le standard incontournable. C'est l'outil privilégié dans les studios du monde entier, et sa maîtrise est essentielle pour communiquer efficacement avec les professionnels du secteur.", image: protoolsImage },
+    { title: 'Ableton', description: "Ableton Live est un logiciel de production audio numérique particulièrement apprécié des musiciens pour sa capacité à combiner création musicale et performance en direct. Son interface facilite l'expérimentation et l'improvisation, rendant le processus créatif dynamique et interactif.", image: abletonImage },
+    { title: 'PCB Grinder MS76', description: "Le MS76 est un compresseur Mid/Side ou double mono de type 1176 fabriqué par Gustav de GroupDIY et monté par mes soins. J'adore comment tout se 'glue' à travers cette machine. Tu peux controler l'ouverture panoramique, ajuster le niveau de Mid ou de Side, et de les compresser séparément. Superbe outil de mastering.", image: msImage },
+    { title: 'PCB Grinder PQ2', description: "Version DIY de l'égaliseur légendaire Pultec, conçu par le maître danois Gustav de GOLY / PCB Grinder, cette version est spécialement adaptée au mastering.Tout sort beau de cet égaliseur : les aigus sont cristallins sans être agressifs, et les basses, amples et profondes.  J'ai eu le plaisir de l'assembler moi-même.", image: pqImage },
+    { title: 'RME Fireface UC', description: "Le RME Fireface UC est ma carte son, que j'utilise principalement avec son compagnon, l'Octamic, pour des prises de son en extérieur, pouvant accueillir jusqu'à 10 microphones. C'est incroyable de voir tout ce qu'ils ont réussi à intégrer dans une si petite machine !", image: rmeImage },
+    { title: 'RME Octamic II', description: "Le RME Octamic II est un préamplificateur micro polyvalent que j'utilise pour les prises de son en extérieur. Avec la Rme Fireface couplé en adat, je peux enregistrer jusqu'à 10 microphones et 8 jacks symétriques sans compter toutes les sorties indépendantes pour les casques. Un duo de choc !!", image: octamicImage },
   ];
 
   return (
@@ -112,10 +112,9 @@ const MaterialSection = () => {
         <Popup
           content={
             <>
-              <h2>{selectedContent.title}</h2>
-              <img src={selectedContent.image} alt={selectedContent.title} />
-              <p>{selectedContent.description}</p>
-            </>
+            <img src={selectedContent.image} alt={selectedContent.title} />
+            <small-text>{selectedContent.description}</small-text>
+          </>
           }
           closePopup={closePopup}
         />

@@ -1,3 +1,8 @@
+.scroll-section {
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden; /* Empêche le débordement horizontal */
+}
 .section-title {
   margin-bottom: 70px; /* Espace sous le titre */
 }
@@ -66,21 +71,30 @@
   opacity: 1;
 }
 
-/* Animation pour changer la teinte grise de l'ombre */
+/* Animation pour l'ombre pulsante */
 @keyframes shadowPulse {
-  0% {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Noir */
+  from {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  25% {
-    box-shadow: 0 4px 8px rgba(64, 64, 64, 0.7); /* Gris foncé */
+  to {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   }
-  50% {
-    box-shadow: 0 4px 8px rgba(128, 128, 128, 0.7); /* Gris moyen */
+}
+
+
+/* Media queries pour ajuster les vignettes sur les petits écrans */
+@media (max-width: 1200px) {
+  .sound-examples {
+    grid-template-columns: repeat(3, 2fr); /* 3 colonnes pour les écrans de largeur maximale de 1200px */
   }
-  75% {
-    box-shadow: 0 4px 8px rgba(192, 192, 192, 0.7); /* Gris clair */
+}
+
+@media (max-width: 768px) {
+  .sound-examples {
+    grid-template-columns: repeat(2, 2fr); /* 2 colonnes pour les écrans de largeur maximale de 768px */
   }
-  100% {
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7); /* Blanc */
+  .thumbnail {
+    width: 140px; /* Réduit encore la taille des vignettes */
+    height: 140px; /* Réduit encore la taille des vignettes */
   }
 }

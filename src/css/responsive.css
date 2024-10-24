@@ -1,54 +1,99 @@
 /* Styles généraux pour les petits écrans */
-@media (max-width: 480px) {
-  body {
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    margin: 0; /* Supprime les marges par défaut */
+@media (max-width: 768px) {
+  
+  .App,
+  .material-section,
+  .presentation-section,
+  .experience-section,
+  .media-section,
+  .sound-example,
+  .material-column,
+  .scroll-section,
+  .media-gallery,
+  .media-item,
+  .scroll-text,
+  .video-frame,
+  .audio-frame,
+  .popup-content {
+    width: 100%;
   }
 
-  .container {
-    max-width: 100vw; /* Limite la largeur maximale à 100% de la largeur de la fenêtre */
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    margin: 0 auto; /* Centre le conteneur */
+  .material-section,
+  .presentation-section,
+  .experience-section,
+  .media-section,
+  .sound-example,
+  .material-column,
+  .scroll-section,
+  .media-gallery,
+  .media-item,
+  .scroll-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .material-column h2,
+  .material-column h3,
+  .scroll-section h1,
+  .scroll-section h2,
+  .scroll-section h3,
+  .media-title,
+  .text-left,
+  .sections h2,
+  .popup-content p {
+    text-align: center;
+  }
+
+  .background-photo,
+  .video-frame,
+  .audio-frame,
+  .media-item img,
+  .popup-content img {
+    height: auto;
+  }
+
+  .background-photo,
+  .media-item img,
+  .popup-content img {
+    width: 100%;
+  }
+
+  .white-band,
+  .sections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .white-band {
-    display: flex;
-    flex-direction: column;
     padding: 10px;
-    text-align: center;
-    width: 100%; /* Assurez-vous que la white band prend toute la largeur */
-    box-sizing: border-box; /* Incluez le padding dans la largeur */
-    margin: 0 auto; /* Centre la white band */
+    margin: 0 auto;
   }
 
   .text-left {
-    text-align: center;
     margin-bottom: 10px;
   }
 
   .text-left h1 {
-    font-size: 1.2rem; /* Ajuster la taille pour les petits écrans */
+    font-size: 1.5rem;
   }
 
   .text-left h2 {
-    font-size: 1rem; /* Ajuster la taille pour les petits écrans */
+    font-size: 1.2rem;
   }
 
   .sections {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Ajuster l'espacement pour les téléphones */
+    gap: 10px;
     margin-bottom: 10px;
-    width: 100%; /* Assurez-vous que les sections prennent toute la largeur */
-    box-sizing: border-box; /* Incluez le padding dans la largeur */
   }
 
   .sections h2 {
-    margin: 5px 0; /* Ajuster la marge pour les téléphones */
-    font-size: 3vw; /* S'assurer que la taille des h2 est uniforme */
-    cursor: pointer; /* Change le curseur en main (pointer) */
+    margin: 5px 0;
+    font-size: 1rem;
+    cursor: pointer;
   }
 
   .social-icons {
@@ -60,130 +105,115 @@
   .social-icons img {
     width: 20px;
   }
-}
-
-/* Styles spécifiques pour les petits écrans en mode portrait */
-@media (max-width: 480px) and (orientation: portrait) {
-  .white-band {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .text-left h1 {
-    font-size: 1.4rem; /* Ajuster la taille pour les petits écrans en mode portrait */
-  }
-
-  .text-left h2 {
-    font-size: 1.2rem; /* Ajuster la taille pour les petits écrans en mode portrait */
-  }
-
-  .sections {
-    gap: 15px; /* Ajuster l'espacement pour les téléphones en mode portrait */
-  }
-
-  .sections h2 {
-    font-size: 4vw; /* S'assurer que la taille des h2 est uniforme en mode portrait */
-  }
-
-  .social-icons img {
-    width: 25px; /* Ajuster la taille des icônes pour les petits écrans en mode portrait */
-  }
-}
-
-/* Styles pour les tablettes */
-@media (max-width: 768px) {
-  .experience-section {
-    flex-direction: column;
-  }
-
-  .material-section {
-    flex-direction: column; /* Affiche les colonnes en une seule colonne sur les petits écrans */
-    align-items: center; /* Centre les éléments */
-  }
 
   .material-column {
-    min-width: 100%; /* Force chaque colonne à prendre toute la largeur */
-    margin: 5px 0; /* Réduit l'espacement entre les colonnes */
+    margin: 10px 0;
+  }
+
+  .material-column h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin: 10px 0;
+  }
+
+  .material-column p {
+    margin: 2px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .material-column p:hover {
+    transform: scale(1.1);
+  }
+
+  .media-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .media-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .media-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
   .popup-content {
-    width: 90%; /* Réduit la largeur de la popup sur les petits écrans */
+    max-width: 90%;
+    max-height: 90%;
   }
 
-  .sections {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Ajuster l'espacement pour les tablettes */
+  .scroll-section {
+    padding: 20px;
   }
 
-  .sections h2 {
-    margin: 0 8px; /* Ajuster la marge pour les tablettes */
-    font-size: 3vw; /* S'assurer que la taille des h2 est uniforme */
+  .experience-marge-bas,
+  .media-title {
+    margin-bottom: 70px;
   }
 
-  .social-icons {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .social-icons img {
-    width: 15px;
-  }
-
-  .white-band {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .text-left {
-    text-align: center;
-  }
-
-  .text-left h1 {
-    font-size: 1.2rem;
-  }
-
-  .text-left h2 {
-    font-size: 0.8rem;
+  .scroll-text {
+    margin: 0 20px;
+    max-width: calc(100% - 40px);
+    line-height: 1.63;
+    font-size: 1.1rem;
   }
 }
 
 /* Styles pour les écrans moyens */
 @media (max-width: 1200px) {
   .background-photo {
-    height: 70vh; /* Réduit la hauteur sur les écrans plus petits */
+    height: 70vh;
   }
 
   .white-band {
-    padding: 10px; /* Augmente l'espacement pour une meilleure lisibilité */
+    padding: 10px;
   }
 
   .sections {
-    flex-direction: column; /* Empile les sections pour plus de lisibilité */
-    align-items: center; /* Centre le contenu */
+    flex-direction: column;
+    align-items: center;
   }
 
   .social-icons {
-    justify-content: center; /* Centre les icônes sur les petits écrans */
+    justify-content: center;
   }
 
   .scroll-text {
-    font-size: 1.1rem; /* Réduire la taille du texte pour les petits écrans */
+    font-size: 1.1rem;
   }
 }
 
 /* Modes horizontaux pour tablettes et téléphones */
 @media (orientation: landscape) and (max-width: 1000px) {
   .white-band {
-    padding: 3px 5px; /* Réduire le padding pour le mode paysage */
+    padding: 3px 5px;
   }
 
   .text-left h1 {
-    font-size: 1.5rem; /* Ajuster la taille pour le mode paysage */
+    font-size: 1.5rem;
   }
 
   .text-left h2 {
-    font-size: 1rem; /* Ajuster la taille pour le mode paysage */
+    font-size: 1rem;
   }
 }

@@ -125,7 +125,7 @@ audio {
 .thumbnail {
   position: relative;
   width: 300px; /* Ajustez la largeur si nécessaire */
-  height: 300px; /* Ajustez la hauteur si nécessaire */
+  height: auto; /* Conserve les proportions de l'image */
   overflow: hidden; /* Pour éviter le débordement */
 }
 

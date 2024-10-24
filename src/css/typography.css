@@ -1,5 +1,5 @@
 /* Typographie pour h1, h2, et h3 */
-h1, h2, h3 {
+h1, h2, h3, p, text-small {
   font-family: 'Lora', serif; /* Utiliser la même typo pour les 3 */
   color: #333; /* Couleur du texte */
   margin: 10px 0; /* Espacement vertical */
@@ -22,8 +22,8 @@ p {
   line-height: 1.5;
 }
 /* Styles pour les autres éléments de texte */
-.text-small {
-  font-size: 0.875rem; /* Taille de police pour le texte petit */
+text-small {
+  font-size: 1rem; /* Taille de police pour le texte petit */
 }
 .text-large {
   font-size: 1.125rem; /* Taille de police pour le texte grand */
