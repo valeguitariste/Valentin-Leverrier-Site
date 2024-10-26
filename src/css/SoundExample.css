@@ -51,10 +51,11 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-.sound-example:hover .title {
-  opacity: 1;
+.sound-example.playing .title,
+.sound-example.hovered .title {
+  opacity: 1; /* Rendre visible si en lecture ou survolé */
 }
+
 
 .icon {
   position: absolute;
@@ -67,19 +68,30 @@
   transition: opacity 0.3s ease;
 }
 
-.sound-example:hover .icon {
+.sound-example:hover .icon,
+  .sound-example.playing .icon {
   opacity: 1;
 }
 
 /* Animation pour l'ombre pulsante */
 @keyframes shadowPulse {
-  from {
+  0% {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
   }
-  to {
+  50% {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
   }
 }
+
+
+
+
 
 
 /* Media queries pour ajuster les vignettes sur les petits écrans */
@@ -96,5 +108,20 @@
   .thumbnail {
     width: 140px; /* Réduit encore la taille des vignettes */
     height: 140px; /* Réduit encore la taille des vignettes */
+  }
+}
+@media (max-width: 768px) {
+  .sound-examples {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  
+  .thumbnail {
+    width: 140px;
+    height: 140px;
+  }
+
+  .title {
+    font-size: 0.8rem; /* Réduit la taille de la police du titre */
+    padding: 2px; /* Ajustez le padding si nécessaire */
   }
 }

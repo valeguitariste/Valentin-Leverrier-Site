@@ -2,7 +2,6 @@
   "name": "valentin-leverrier-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://valeguitariste.github.io/Valentin-Leverrier-Site",
   "dependencies": {
     "@babel/core": "^7.25.9",
     "@testing-library/jest-dom": "^5.17.0",

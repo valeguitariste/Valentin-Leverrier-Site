@@ -8,3 +8,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /* Désactiver la sélection de texte */
+  -moz-user-select: none; /* Désactiver la sélection de texte */
+  -ms-user-select: none; /* Désactiver la sélection de texte */
+  user-select: none; /* Désactiver la sélection de texte */
+}

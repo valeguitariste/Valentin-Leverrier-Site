@@ -3,28 +3,28 @@ import Popup from './Popup'; // Importez le composant Popup
 import './css/typography.css'; // Importez le fichier CSS
 import './css/material.css'; // Importez le fichier CSS
 
-import neumannImage from './image/Neumann_RSM_191.png';
-import sennheiserImage from './image/Sennheiser_416.png';
-import beyerdynamicImage from './image/Beyerdynamic_m160.png';
-import dpaImage from './image/DPA_6061.png';
-import primoImage from './image/Primo_EM272Z1.png';
-import schoepsImage from './image/Schoeps_CCM4.png';
-import u87Image from './image/U87_Neumann.png';
-import mixpreImage from './image/Sound_Devices_mixpre_6.png';
-import tentacleTrackImage from './image/Tentacle_Track_E.png';
-import tentacleSyncImage from './image/Tentacle_Sync.png';
-import genelecImage from './image/Genelec_8010.png';
-import pmcImage from './image/PMC.png';
-import ambientImage from './image/Ambient.png';
-import manfrottoImage from './image/manfrotto.png';
-import reaperImage from './image/reaper.png';
-import protoolsImage from './image/protools.png';
-import abletonImage from './image/ableton.png';
-import msImage from './image/ms.png';
-import pqImage from './image/pq.png';
-import rmeImage from './image/rme.png';
-import octamicImage from './image/octamic.png';
-import dtImage from './image/dt.png';
+import neumannImage from './image/Neumann_RSM_191.webp';
+import sennheiserImage from './image/Sennheiser_416.webp';
+import beyerdynamicImage from './image/Beyerdynamic_m160.webp';
+import dpaImage from './image/DPA_6061.webp';
+import primoImage from './image/Primo_EM272Z1.webp';
+import schoepsImage from './image/Schoeps_CCM4.webp';
+import u87Image from './image/U87_Neumann.webp';
+import mixpreImage from './image/Sound_Devices_mixpre_6.webp';
+import tentacleTrackImage from './image/Tentacle_Track_E.webp';
+import tentacleSyncImage from './image/Tentacle_Sync.webp';
+import genelecImage from './image/Genelec_8010.webp';
+import pmcImage from './image/PMC.webp';
+import ambientImage from './image/Ambient.webp';
+import manfrottoImage from './image/manfrotto.webp';
+import reaperImage from './image/reaper.webp';
+import protoolsImage from './image/protools.webp';
+import abletonImage from './image/ableton.webp';
+import msImage from './image/ms.webp';
+import pqImage from './image/pq.webp';
+import rmeImage from './image/rme.webp';
+import octamicImage from './image/octamic.webp';
+import dtImage from './image/dt.webp';
 
 const MaterialSection = () => {
   const [selectedContent, setSelectedContent] = useState(null);
@@ -38,7 +38,7 @@ const MaterialSection = () => {
   };
 
   const microphones = [
-    { title: 'Neumann RSM 191', description: "Le Neumann RSM 191, avec ses deux capsules – hyper-cardioïde et figure en 8 – crée une image stéréophonique unique et magnifique. Il me suit dans mes voyages, capturant chaque ambiance. Pratique pour l’audiovisuel, il permet d’ajuster l’ouverture panoramique, que ce soit à l’enregistrement ou en post-production.", image: neumannImage },
+    { title: 'Neumann RSM 191', description: "Le Neumann RSM 191, avec ses deux capsules hyper-cardioïde et figure en 8 crée une image stéréophonique unique et magnifique. Il me suit dans mes voyages, capturant chaque ambiance. Pratique pour l’audiovisuel, il permet d’ajuster l’ouverture panoramique, que ce soit à l’enregistrement ou en post-production.", image: neumannImage },
     { title: 'Sennheiser 416', description: "Le Sennheiser 416 p48 est un microphone directionnel de renommée mondiale, réputé pour sa capacité à capturer des sons clairs dans des environnements bruyants.", image: sennheiserImage },
     { title: 'Beyerdynamic m160', description: "Le Beyerdynamic M160, avec sa directivité hypercardioïde, est un microphone à ruban idéal pour les enregistrements vocaux en intérieur. Son ruban confère à la voix une chaleur et une tonalité naturelle.", image: beyerdynamicImage },
     { title: 'DPA 6061', description: "Le DPA 6061 est un microphone de lavalier extrêmement petit et discret, offrant une qualité sonore exceptionnelle.", image: dpaImage },

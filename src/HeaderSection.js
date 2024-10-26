@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import mailLogo from './image/mail.png';
-import phoneLogo from './image/phone.png';
-import instaLogo from './image/insta.png';
+import mailLogo from './image/mail.webp';
+import phoneLogo from './image/phone.webp';
+import instaLogo from './image/insta.webp';
 import './css/responsive.css';
 import './css/header.css';
 
@@ -48,7 +48,7 @@ const HeaderSection = ({ scrollToSection }) => {
             <h2 className="clickable" onClick={() => scrollToSection('material')}>Matériel</h2>
             <h2 className="clickable" onClick={() => scrollToSection('experience')}>Expérience</h2>
             <h2 className="clickable" onClick={() => scrollToSection('sound-examples')}>Exemples sonores</h2>
-            <h2 className="clickable" onClick={() => scrollToSection('media')}>Média</h2>
+            <h2 className="clickable" onClick={() => scrollToSection('media')}>Médias</h2>
           </div>
         )}
         {/* Affichage permanent des titres si l'écran est supérieur à 900px */}

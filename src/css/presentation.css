@@ -1,6 +1,7 @@
 /* Styles généraux pour la section de présentation */
 .presentation-title {
-  margin-bottom: 70px; /* Espace sous le titre */
+  margin-bottom: 50px; /* Espace sous le titre */
+  margin-top: 50px;
 }
 .scroll-section {
   padding: 20px;

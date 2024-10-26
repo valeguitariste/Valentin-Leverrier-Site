@@ -1,0 +1,63 @@
+.footer {
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 0px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative; /* Position statique */
+  margin-top: 1px; /* Ajoutez une marge en haut */
+  margin-bottom: 20px; /* Ajoutez une marge en bas */
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px; /* Ajustez la taille du texte ici */
+  transition: transform 0.3s ease, color 0.3s ease; /* Ajoutez une transition pour l'effet de zoom et la couleur */
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.footer a:hover {
+  text-decoration: none;
+  transform: scale(1.1); /* Effet de zoom */
+  color: #ff6347; /* Changez la couleur du texte au survol */
+}
+
+.footer a:hover::before {
+  content: '🎨 '; /* Emoji avant le texte */
+  margin-right: 5px;
+}
+
+.footer a:hover::after {
+  content: ' 🎨'; /* Emoji après le texte */
+  margin-left: 5px;
+}
+
+.footer a:hover span {
+  display: block;
+  position: absolute;
+  top: 100%; /* Positionné en dessous du texte principal */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px; /* Taille du texte pour (dessins) */
+  color: #ff6347; /* Même couleur que le texte principal au survol */
+}
+
+.footer a span {
+  display: none; /* Masqué par défaut */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px; /* Taille du texte plus petite */
+  }
+
+  .footer a {
+    font-size: 10px; /* Taille du texte plus petite */
+  }
+}

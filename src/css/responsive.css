@@ -180,7 +180,7 @@
 }
 
 /* Styles pour les écrans moyens */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .background-photo {
     height: 70vh;
   }

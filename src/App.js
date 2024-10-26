@@ -5,6 +5,8 @@ import MaterialSection from './MaterialSection';
 import ExperienceSection from './ExperienceSection';
 import SoundExample from './SoundExample';
 import MediaSection from './MediaSection';
+import Footer from './Footer'; // Importez le composant Footer
+
 
 import './index.css'; // Importez le fichier CSS global
 
@@ -25,6 +27,7 @@ function App() {
       <ExperienceSection />
       <SoundExample />
       <MediaSection />
+      <Footer />
     </div>
   );
 }

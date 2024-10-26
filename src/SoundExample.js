@@ -8,6 +8,7 @@ import transmetteurImage from './image/image-son/Transmetteur.png';
 import passionImage from './image/image-son/passion2.png';
 import artisantImage from './image/image-son/artisant.png';
 import libanaiseImage from './image/image-son/Yusra.png';
+import amoureuxImage from './image/image-son/amoureux.png';
 
 import audioFileforet from './music/Sa_majesté_la_forêt.mp3';
 import audioFilerésistance from './music/Résistance.mp3';
@@ -16,6 +17,7 @@ import audioFiletransmetteur from './music/Transmetteur.mp3';
 import audioFilepassion from './music/Passion.mp3';
 import audioFileartisant from './music/artisant.mp3';
 import audioFilelibanaise from './music/libanaise.mp3';
+import audioFileamoureux from './music/amoureux.mp3';
 
 import { FaPlay, FaPause } from 'react-icons/fa'; // Importez les icônes de lecture et de pause
 
@@ -45,8 +47,8 @@ const SoundExample = () => {
       title: 'Sa majesté la forêt',
       image: majesteImage,
       audioPath: audioFileforet,
-      iconColor: 'white', // Couleur du symbole du lecteur
-      iconOpacity: 0.7, // Opacité du symbole du lecteur
+      iconColor: 'black', // Couleur du symbole du lecteur
+      iconOpacity: 0.6, // Opacité du symbole du lecteur
     },
     {
       title: 'La résistante',
@@ -77,7 +79,7 @@ const SoundExample = () => {
       iconOpacity: 0.6, // Opacité du symbole du lecteur
     },
     {
-      title: 'Artisant',
+      title: 'L\'artisan',
       image: artisantImage,
       audioPath: audioFileartisant,
       iconColor: 'black', // Couleur du symbole du lecteur
@@ -87,6 +89,13 @@ const SoundExample = () => {
       title: 'La Libanaise',
       image: libanaiseImage,
       audioPath: audioFilelibanaise,
+      iconColor: 'black', // Couleur du symbole du lecteur
+      iconOpacity: 0.6, // Opacité du symbole du lecteur
+    },
+    {
+      title: 'L\'amoureux',
+      image: amoureuxImage,
+      audioPath: audioFileamoureux,
       iconColor: 'black', // Couleur du symbole du lecteur
       iconOpacity: 0.6, // Opacité du symbole du lecteur
     },
@@ -105,9 +114,13 @@ const SoundExample = () => {
             onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => toggleAudio(example.audioPath, index)}
           >
-            <img src={example.image} alt={example.title} className={`thumbnail ${playingIndex === index ? 'playing' : ''}`} />
-            {hoveredIndex === index && <p className="title">{example.title}</p>}
-            <div className="icon" style={{ color: example.iconColor, opacity: example.iconOpacity }}>
+           <img src={example.image} alt={example.title} className={`thumbnail ${playingIndex === index ? 'playing' : ''}`} />
+    
+           {/* Le titre s'affiche si l'audio est en lecture ou si la vignette est survolée */}
+           <p className={`title ${(playingIndex === index && !audioRef.current.paused) || hoveredIndex === index ? 'show' : ''}`}>{example.title}</p>
+
+    
+          <div className="icon" style={{ color: example.iconColor, opacity: example.iconOpacity }}>
               {playingIndex === index ? <FaPause /> : <FaPlay />}
             </div>
           </div>

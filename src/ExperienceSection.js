@@ -96,7 +96,7 @@ const ExperienceSection = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   width="100%"
-                  height="400"
+                  height="600"
                 ></iframe>
                 {selectedContent.text && <text-small>{selectedContent.text}</text-small>}
               </>

@@ -67,6 +67,7 @@
   border-radius: 10px;
 }
 
+
 /* Media queries pour ajuster les vignettes sur les petits écrans */
 @media (max-width: 1200px) {
   .media-item {
@@ -77,16 +78,7 @@
 
 @media (max-width: 768px) {
   .media-item {
-    flex: 1 1 calc(50% - 10px); /* Les éléments prennent 50% de la largeur moins l'espace du gap */
-    max-width: calc(5% - 10px); /* Limite la taille maximale des éléments */
-    margin-bottom: 10px; /* Ajoute un espace en bas pour éviter le chevauchement */
-  }
-}
-
-@media (max-width: 480px) {
-  .media-item {
-    flex: 1 1 calc(100% - 10px); /* Les éléments prennent 100% de la largeur moins l'espace du gap */
+    flex: 1 1 calc(100% - 10px); /* Les éléments prennent 50% de la largeur moins l'espace du gap */
     max-width: calc(50% - 10px); /* Limite la taille maximale des éléments */
-    margin-bottom: 10px; /* Ajoute un espace en bas pour éviter le chevauchement */
   }
 }

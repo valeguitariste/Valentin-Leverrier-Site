@@ -1,5 +1,5 @@
 .background-photo {
-  background-image: url('../image/profil2.png'); /* Assurez-vous que le chemin est correct */
+  background-image: url('../image/profil2.webp'); /* Assurez-vous que le chemin est correct */
   background-size: cover;
   background-position: center;
   height: 100vh; /* Ajustez la hauteur selon vos besoins */
@@ -69,6 +69,8 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 4; /* Assurez-vous que le hamburger est au-dessus du voile */
+  transition: transform 1s ease; /* Transition pour l'icône */
+
 }
 
 .hamburger span {
@@ -77,6 +79,7 @@
   background: #333;
   border-radius: 3px;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -113,13 +116,13 @@
   }
   .text-left {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .text-left h1 {
-    font-size: 1.7rem; /* Ajuster la taille pour les petits écrans */
+    font-size: 2rem; /* Ajuster la taille pour les petits écrans */
   }
   .text-left h2 {
-    font-size: 1rem; /* Ajuster la taille pour les petits écrans */
+    font-size: 1.2rem; /* Ajuster la taille pour les petits écrans */
   }
   .sections {
     display: none;
@@ -128,6 +131,7 @@
     gap: 15px;
     margin-bottom: 10px;
     margin-top: 20px;
+    transition: max-height 1s ease; /* Ajoute une transition pour l'effet de déploiement */
   }
   
   .sections.open {
@@ -136,16 +140,16 @@
   
   .menu-icon {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .social-icons {
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .social-icons img {
-    width: 25px;
+    width: 20px;
   }
   
 }

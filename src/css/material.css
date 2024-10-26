@@ -1,5 +1,6 @@
 .section-title {
-  margin-bottom: 70px; /* Espace sous le titre */
+  margin-bottom: 40px; /* Espace sous le titre */
+  margin-top: 40px;
 }
 
 
@@ -34,4 +35,10 @@
 
 .material-column p:hover {
   transform: scale(1.1); /* Grossit légèrement le texte lorsqu'on le survole */
+}
+
+@media (max-width: 768px) {
+  .material-section {
+    flex-direction: column;
+  }
 }
